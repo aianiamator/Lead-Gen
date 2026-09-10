@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northgate Consulting — Get a Free Consultation</title>
+<meta name="description" content="Tell us what you need and we'll match you with the right specialist. Free consultation, a response within one business day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+
+<a class="skip-link" href="#lead-form">Skip to the enquiry form</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">N</span>
+      <span class="brand-name">Northgate</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#proof">Results</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-sm btn-primary" href="#lead-form">Book a consultation</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Free 30-minute consultation</p>
+        <h1>Tell us the problem. We'll bring the right people.</h1>
+        <p class="lede">
+          Share a few details and we'll match you with a specialist who has solved
+          your exact problem before. No sales script, no obligation &mdash; just a
+          straight answer about whether we can help, usually within one business day.
+        </p>
+        <ul class="hero-points">
+          <li>Reply within 1 business day</li>
+          <li>Fixed-scope quote before any work starts</li>
+          <li>No charge for the first conversation</li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#lead-form">Get my free consultation</a>
+          <a class="btn btn-ghost" href="#process">See how it works</a>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="form-card" id="lead-form">
+        <div class="form-head">
+          <h2>Request your consultation</h2>
+          <p>Takes about 60 seconds. We only ask for what we actually need.</p>
+        </div>
+
+        <form id="leadForm" novalidate>
+          <div class="field">
+            <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name"
+                   placeholder="Jane Okonkwo" required>
+            <p class="error" data-error-for="name"></p>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email"
+                     inputmode="email" placeholder="jane@company.com" required>
+              <p class="error" data-error-for="email"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel"
+                     inputmode="tel" placeholder="+44 7700 900000" required>
+              <p class="error" data-error-for="phone"></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="service">Service needed <span class="req" aria-hidden="true">*</span></label>
+              <select id="service" name="service" required>
+                <option value="" selected disabled>Choose a service</option>
+                <option>Business strategy &amp; growth</option>
+                <option>Marketing &amp; lead generation</option>
+                <option>Web design &amp; development</option>
+                <option>AI &amp; automation</option>
+                <option>Branding &amp; creative</option>
+                <option>Training &amp; workshops</option>
+                <option>Something else</option>
+              </select>
+              <p class="error" data-error-for="service"></p>
+            </div>
+            <div class="field">
+              <label for="budget">Budget <span class="req" aria-hidden="true">*</span></label>
+              <select id="budget" name="budget" required>
+                <option value="" selected disabled>Select a range</option>
+                <option>Under &pound;1,000</option>
+                <option>&pound;1,000 &ndash; &pound;5,000</option>
+                <option>&pound;5,000 &ndash; &pound;15,000</option>
+                <option>&pound;15,000 &ndash; &pound;50,000</option>
+                <option>&pound;50,000+</option>
+                <option>Not sure yet</option>
+              </select>
+              <p class="error" data-error-for="budget"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="appointmentDate">Preferred appointment date <span class="req" aria-hidden="true">*</span></label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+            <p class="hint">Pick any weekday that suits you &mdash; we'll confirm a time by email.</p>
+            <p class="error" data-error-for="appointmentDate"></p>
+          </div>
+
+          <div class="field">
+            <label for="problem">What's the main problem you want solved? <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="problem" name="problem" rows="4" maxlength="1000" required
+                      placeholder="e.g. We get plenty of website traffic but almost no enquiries, and we don't know where it's breaking down."></textarea>
+            <p class="hint"><span id="problemCount">0</span>/1000 characters</p>
+            <p class="error" data-error-for="problem"></p>
+          </div>
+
+          <div class="field consent">
+            <label class="check">
+              <input type="checkbox" id="consent" name="consent" required>
+              <span>I agree to be contacted about this enquiry and accept the
+              <a href="#privacy">privacy notice</a>.</span>
+            </label>
+            <p class="error" data-error-for="consent"></p>
+          </div>
+
+          <!-- Honeypot: hidden from humans, filled in by most bots -->
+          <div class="hp" aria-hidden="true">
+            <label for="company_website">Leave this field empty</label>
+            <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+            <span class="btn-label">Request my consultation</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+
+          <p class="form-foot">We reply within one business day. Your details are never sold or shared.</p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="success" id="successPanel" hidden>
+          <div class="success-mark" aria-hidden="true">&#10003;</div>
+          <h3>Request received</h3>
+          <p>
+            Thanks <strong class="js-name">there</strong> &mdash; your request is in.
+            We'll email <strong class="js-email">you</strong> to confirm your
+            <strong class="js-date">appointment</strong>, usually within one business day.
+          </p>
+          <button type="button" class="btn btn-ghost btn-sm" id="resetBtn">Send another request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trustbar" aria-label="At a glance">
+    <div class="wrap trust-grid">
+      <div><strong>400+</strong><span>projects delivered</span></div>
+      <div><strong>1 day</strong><span>average first response</span></div>
+      <div><strong>4.9/5</strong><span>average client rating</span></div>
+      <div><strong>12 yrs</strong><span>in business</span></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What we do</p>
+        <h2>Six ways we help, one way we work</h2>
+        <p class="section-lede">Every engagement starts with the same free consultation. What comes after depends entirely on what you actually need.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>Business strategy &amp; growth</h3>
+          <p>Where the revenue is leaking, which market to enter next, and what to stop doing. Clear priorities backed by your own numbers.</p>
+        </article>
+        <article class="card">
+          <h3>Marketing &amp; lead generation</h3>
+          <p>Campaigns, funnels and follow-up that produce booked calls, not vanity metrics. Measured on pipeline, reported monthly.</p>
+        </article>
+        <article class="card">
+          <h3>Web design &amp; development</h3>
+          <p>Fast, accessible sites built to convert. Designed around the one action you need visitors to take.</p>
+        </article>
+        <article class="card">
+          <h3>AI &amp; automation</h3>
+          <p>Quote generation, lead routing, onboarding, reporting. We automate the repetitive work so your team handles the judgement calls.</p>
+        </article>
+        <article class="card">
+          <h3>Branding &amp; creative</h3>
+          <p>Positioning, identity and messaging that makes the choice obvious to the right buyer and uninteresting to the wrong one.</p>
+        </article>
+        <article class="card">
+          <h3>Training &amp; workshops</h3>
+          <p>Hands-on sessions for your team, in person or remote. They leave with working assets, not slide decks.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section section-alt" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Three steps, no surprises</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <h3>You send the form</h3>
+          <p>Seven questions. Enough for us to route you to the right specialist instead of a generalist reading from a script.</p>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <h3>We call you back</h3>
+          <p>A 30-minute conversation on your preferred date. We'll tell you honestly whether this is something we should take on.</p>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <h3>You get a fixed quote</h3>
+          <p>Scope, timeline and price in writing before anything starts. If you'd rather take it in-house, the plan is yours to keep.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="section" id="proof">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Results</p>
+        <h2>What clients say</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote>They found the bottleneck in our sales process in the first call. We had been guessing at it for a year.</blockquote>
+          <figcaption><strong>Amara Bello</strong><span>Operations Director, Kestrel Logistics</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>Enquiries tripled in four months, and the quality went up rather than down. The reporting is genuinely honest.</blockquote>
+          <figcaption><strong>Daniel Osei</strong><span>Founder, Brightline Dental</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>The automation work paid for itself in eleven weeks. Our team stopped copying data between systems entirely.</blockquote>
+          <figcaption><strong>Priya Raman</strong><span>COO, Vantage Property Group</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="wrap wrap-narrow">
+      <div class="section-head">
+        <p class="eyebrow">Questions</p>
+        <h2>Before you send the form</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is the consultation really free?</summary>
+          <p>Yes. Thirty minutes, no charge, no obligation. If we are not the right fit we will say so and point you somewhere better.</p>
+        </details>
+        <details>
+          <summary>What if I don't know my budget yet?</summary>
+          <p>Choose &ldquo;Not sure yet&rdquo;. The question helps us bring the right person to the call &mdash; it isn't a commitment, and the number doesn't change our advice.</p>
+        </details>
+        <details>
+          <summary>How quickly will I hear back?</summary>
+          <p>Within one business day. Requests that arrive over the weekend are answered on Monday morning.</p>
+        </details>
+        <details>
+          <summary>What happens to my details?</summary>
+          <p>They go straight into our internal system so we can prepare for your call. We never sell or share them, and you can ask us to delete them at any time.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="finalcta">
+    <div class="wrap">
+      <h2>Still weighing it up?</h2>
+      <p>The consultation costs nothing and takes half an hour. The worst outcome is a clear answer.</p>
+      <a class="btn btn-primary" href="#lead-form">Request your consultation</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="privacy">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-name">Northgate</span>
+      </a>
+      <p class="muted">Consulting for businesses that would rather fix the cause than the symptom.</p>
+    </div>
+    <div>
+      <h4>Privacy notice</h4>
+      <p class="muted">We use the details you submit solely to respond to your enquiry and prepare for your consultation. We do not sell or share your data with third parties. Email us to request deletion at any time.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p class="muted">hello@example.com<br>+44 20 7946 0000<br>Mon&ndash;Fri, 9am&ndash;6pm</p>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p class="muted">&copy; <span id="year">2026</span> Northgate Consulting. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/config.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+</body>
+</html>
